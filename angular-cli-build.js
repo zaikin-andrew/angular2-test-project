@@ -10,9 +10,9 @@ module.exports = function(defaults) {
       'zone.js/dist/**/*.+(js|js.map)',
       'es6-shim/es6-shim.js',
       'reflect-metadata/**/*.+(js|js.map)',
+      'angular2-jwt/**/*.+(js|js.map)',
       'rxjs/**/*.+(js|js.map)',
-      '@angular/**/*.+(js|js.map)',
-      'angular2-localstorage/index.js'
+      '@angular/**/*.+(js|js.map)'
     ]
   });
 };

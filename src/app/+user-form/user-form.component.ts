@@ -12,25 +12,25 @@ import { UserService } from '../shared';
   directives: [ NgClass ]
 })
 export class UserFormComponent implements OnInit {
-  constructor(
-    private userService: UserService,
-    private routeSegment: RouteSegment,
-    private router: Router
-  ) {}
 
   model = this.userService.getUserById(+this.routeSegment.getParam('id')) || {};
-
   genders: String[] = [
     'male',
     'female'
   ];
 
+  constructor(
+    private userService: UserService,
+    private routeSegment: RouteSegment,
+    private router: Router
+  ) {}
+  
   ngOnInit() {
   }
 
   onSubmit(){
     this.userService.save(this.model)
-      .then(user => this.router.navigate(['/users']))
+      .then(user => this.router.navigate(['/']))
       .catch(error => console.error(error.message));
   }
 

@@ -1,5 +1,4 @@
 import { Injectable } from '@angular/core';
-// import { LocalStorage } from 'angular2-localstorage/WebStorage';
 
 import { User } from './user.model';
 
@@ -21,9 +20,9 @@ export class UserService {
   }
 
   save(user): Promise<any> {
-    return new Promise( (resolve, reject) => {
+    return new Promise(resolve => {
       if(!user.id) {
-        user.id = this.users[this.users.length - 1].id +1;
+        user.id = this.users.length? this.users[this.users.length - 1].id + 1: 1;
         user = new User(user);
       }
       this.addUserToUsers(user);
@@ -32,7 +31,7 @@ export class UserService {
   }
 
   remove(user: User): Promise<any> {
-    return new Promise( (resolve) => {
+    return new Promise(resolve => {
       this.removeUserFromUsers(user);
       resolve(this.users);
     });

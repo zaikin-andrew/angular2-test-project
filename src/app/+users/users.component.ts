@@ -8,7 +8,7 @@ import { User, UserService } from '../shared';
   selector: 'app-users',
   templateUrl: 'users.component.html',
   styleUrls: ['users.component.css'],
-  directives: [ROUTER_DIRECTIVES]
+  directives: [ ROUTER_DIRECTIVES ]
 })
 export class UsersComponent implements OnInit {
   users: User[] = [];

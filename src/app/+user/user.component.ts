@@ -9,6 +9,7 @@ import { User, UserService } from '../shared';
   templateUrl: 'user.component.html',
   styleUrls: ['user.component.css']
 })
+
 export class UserComponent implements OnInit {
 
   user: User;

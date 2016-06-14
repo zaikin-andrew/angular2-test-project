@@ -14,9 +14,5 @@ describe('App: Angular2TestProject', () => {
       inject([Angular2TestProjectAppComponent], (app: Angular2TestProjectAppComponent) => {
     expect(app).toBeTruthy();
   }));
-
-  it('should have as title \'angular2-test-project works!\'',
-      inject([Angular2TestProjectAppComponent], (app: Angular2TestProjectAppComponent) => {
-    expect(app.title).toEqual('angular2-test-project works!');
-  }));
+  
 });

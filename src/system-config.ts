@@ -25,6 +25,7 @@ const barrels: string[] = [
 
   // Thirdparty barrels.
   'rxjs',
+  'angular2-jwt',
 
   // App specific barrels.
   'app',
@@ -32,11 +33,13 @@ const barrels: string[] = [
   'app/+users',
   'app/+user',
   'app/+user-form',
+  'app/+vk',
   /** @cli-barrel */
 ];
 
 const cliSystemConfigPackages: any = {};
 barrels.forEach((barrelName: string) => {
+  if(barrelName == 'angular2-jwt') return cliSystemConfigPackages[barrelName] = { main: 'angular2-jwt' };
   cliSystemConfigPackages[barrelName] = { main: 'index' };
 });
 
@@ -48,6 +51,7 @@ System.config({
   map: {
     '@angular': 'vendor/@angular',
     'rxjs': 'vendor/rxjs',
+    'angular2-jwt': 'vendor/angular2-jwt',
     'main': 'main.js'
   },
   packages: cliSystemConfigPackages

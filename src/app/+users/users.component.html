@@ -1,5 +1,5 @@
 <h4>Users list</h4>
-<ul class="collection users-list">
+<ul class="collection users-list" *ngIf="users.length">
   <li class="collection-item avatar" *ngFor="let user of users">
     <img [src]="user.photo" alt="" class="circle">
     <a [id]='user.id' [routerLink]="['/user', user.id]"> {{user.fullName}}</a>
@@ -14,5 +14,10 @@
     </span>
 
   </li>
-
 </ul>
+<div *ngIf="!users.length">
+  <a class="waves-effect waves-light btn" [routerLink]="['/add/user']">
+    Add user
+    <i class="material-icons right">add</i>
+  </a>
+</div>

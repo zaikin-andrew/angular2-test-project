@@ -1,11 +1,14 @@
 import { Component } from '@angular/core';
-import { Routes, Route, Router, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
+import { Routes, Route, ROUTER_DIRECTIVES, ROUTER_PROVIDERS} from '@angular/router';
 
+// Components
 import { UsersComponent } from './+users';
 import { UserComponent } from './+user';
 import { UserFormComponent } from './+user-form';
-import { UserService } from './shared';
+import { VkComponent } from './+vk';
 
+// Services
+import { UserService } from './shared';
 
 @Component({
   moduleId: module.id,
@@ -17,15 +20,13 @@ import { UserService } from './shared';
 })
 
 @Routes([
-  new Route({path: '/users', component: UsersComponent}),
+  new Route({path: '/', component: UsersComponent}),
   new Route({path: '/user/:id', component: UserComponent}),
   new Route({path: '/add/user', component: UserFormComponent}),
-  new Route({path: '/edit/user/:id', component: UserFormComponent})
+  new Route({path: '/edit/user/:id', component: UserFormComponent}),
+  new Route({path: '/vk', component: VkComponent})
 ])
 
 export class Angular2TestProjectAppComponent {
-
-  constructor(private router: Router){
-    router.navigate(['/users']);
-  }
+  constructor(){}
 }

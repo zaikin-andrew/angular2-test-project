@@ -1,0 +1,19 @@
+<div class="col s12 user-profile">
+  <div class="col s4">
+    <img class="responsive-img" [src]="user.photo" />
+  </div>
+  <div class="col s8">
+    <div class="row">
+      <div class="col s12">
+        <h3>{{user.fullName}}</h3>
+      </div>
+      <div class="col s6">Gender</div><div class="col s6">{{user.gender}}</div>
+      <div class="col s6">Email</div><div class="col s6">{{user.email}}</div>
+      <div class="col s6">Telephone</div><div class="col s6">{{user.phone}}</div>
+      <div *ngIf="user.about" class="col s12">
+        <p>About me</p>
+        <p>{{user.about}}</p>
+      </div>
+    </div>
+  </div>
+</div>

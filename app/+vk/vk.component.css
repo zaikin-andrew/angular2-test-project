@@ -1,0 +1,11 @@
+.profile {
+  background-color: #eee;
+}
+.auth-btn-aria {
+  margin: 2.16rem 0 1.168rem 0;
+}
+.left-side .user-img {
+  width:70%;
+  display:block;
+  margin:15px auto 0;
+}

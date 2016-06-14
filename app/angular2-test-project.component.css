@@ -1,0 +1,14 @@
+nav ul a,
+nav .brand-logo {
+  color: #ffffff;
+}
+
+nav .brand-logo img {
+  width: 50px;
+  margin-top: 5px;
+}
+
+p {
+  line-height: 2rem;
+}
+

@@ -1,0 +1,7 @@
+.users-list a {
+  cursor: pointer;
+}
+
+.users-list .secondary-content a {
+  display: inline-block;
+}

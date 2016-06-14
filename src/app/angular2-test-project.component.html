@@ -1,3 +1,29 @@
-<h1>
-  {{title}}
-</h1>
+<nav role="navigation">
+  <div class="nav-wrapper container">
+    <a id="logo-container" [routerLink]="['/users']" class="brand-logo">
+      <img src="/img/30stm-logo.png" alt="logo" class="responsive-img">
+    </a>
+    <ul class="right hide-on-med-and-down">
+      <li><a [routerLink]="['/add/user']">Add user</a></li>
+    </ul>
+
+    <ul id="nav-mobile" class="side-nav">
+      <li><a [routerLink]="['/add/user']">Add user</a></li>
+    </ul>
+    <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+  </div>
+</nav>
+<main>
+  <div class="container">
+    <div class="row">
+      <router-outlet></router-outlet>
+    </div>
+  </div>
+</main>
+<!--<footer class="page-footer teal">-->
+  <!--<div class="footer-copyright">-->
+    <!--<div class="container">-->
+      <!--Made by <a class="brown-text text-lighten-3" href="https://github.com/zaikin-andrew">Andrew Zaikin</a>-->
+    <!--</div>-->
+  <!--</div>-->
+<!--</footer>-->

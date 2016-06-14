@@ -3,6 +3,7 @@
   "version": "0.0.0",
   "license": "MIT",
   "angular-cli": {},
+  "author": "Andrew Zaikin https://github.com/zaikin-andrew",
   "scripts": {
     "start": "ng server",
     "postinstall": "typings install",
